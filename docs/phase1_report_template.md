@@ -109,7 +109,6 @@ Recorded test environment:
 - pytest: 9.1.1
 - Automated tests: 1 passed, 0 failed
 - Test duration: 0.07 seconds
-
 ## 9. Limitations and Next Steps
 
 The current implementation is a runnable baseline, not a completed official evaluation.
