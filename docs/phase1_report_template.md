@@ -4,7 +4,7 @@
 **Event:** Qiskit Fall Fest 2026 — Phase 1  
 **Team:** BeyondQ  
 **Team Members:** Hansika, Hasini, Pranav, Harsha, Srinidhi  
-**Repository commit:**  204f47f9d8b2a1cd574492327d3c6a2f94dbd8f7
+**Repository commit:**  11f4fe89d5d5a44053f857ecc89c38600c4a11e1
 **Report status:** Baseline implementation; official evaluation pending
 
 ## 1. Problem and Scope
