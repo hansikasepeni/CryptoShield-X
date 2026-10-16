@@ -1,0 +1,2 @@
+# Core scanner uses only Python standard library
+# Optional tests: pytest

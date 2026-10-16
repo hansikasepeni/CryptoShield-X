@@ -1,0 +1,21 @@
+{
+  "note": "Fill only from official organizer specifications; do not guess missing fields.",
+  "platform_A": {
+    "official_name": "",
+    "target_spec": "",
+    "OS_version": "",
+    "runtime_version": "",
+    "memory_spec": "",
+    "measurement_method": "",
+    "source_reference": ""
+  },
+  "platform_B": {
+    "official_name": "",
+    "target_spec": "",
+    "OS_version": "",
+    "runtime_version": "",
+    "memory_spec": "",
+    "measurement_method": "",
+    "source_reference": ""
+  }
+}

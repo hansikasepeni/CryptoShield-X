@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "scanner": "CryptoShield X baseline",
+    "input_path": "/mnt/data/CryptoShield_X_Phase1_Starter/samples/mini_repo",
+    "files_scanned": 3,
+    "elapsed_seconds": 0.000905,
+    "rule_count": 13,
+    "supported_extensions": [
+      ".c",
+      ".h",
+      ".java",
+      ".py"
+    ]
+  },
+  "findings": [
+    {
+      "file": "Example.java",
+      "line": 2,
+      "language": "java",
+      "rule_id": "JAVA_EC",
+      "matched_evidence": "class Example { void setup() throws Exception { KeyPairGenerator generator = KeyPairGenerator.getInstance(\"EC\"); } }",
+      "algorithm": "Elliptic curve",
+      "operation": "key_generation_or_signature",
+      "risk": "high",
+      "confidence": "high",
+      "recommendation": "For signatures evaluate ML-DSA; for key agreement evaluate ML-KEM separately.",
+      "method": "line_regex_rule"
+    },
+    {
+      "file": "example.c",
+      "line": 2,
+      "language": "c",
+      "rule_id": "C_OPENSSL_RSA",
+      "matched_evidence": "void demo(void) { RSA_generate_key_ex(NULL, 2048, NULL, NULL); }",
+      "algorithm": "RSA",
+      "operation": "key_generation_or_public_key_crypto",
+      "risk": "high",
+      "confidence": "high",
+      "recommendation": "Inspect whether RSA is used for key transport, signing or another role.",
+      "method": "line_regex_rule"
+    },
+    {
+      "file": "example.py",
+      "line": 2,
+      "language": "python",
+      "rule_id": "PY_RSA_KEYGEN",
+      "matched_evidence": "private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)",
+      "algorithm": "RSA",
+      "operation": "key_generation",
+      "risk": "high",
+      "confidence": "high",
+      "recommendation": "Determine whether RSA supports key establishment or signatures; choose a purpose-appropriate PQC design.",
+      "method": "line_regex_rule"
+    }
+  ]
+}
