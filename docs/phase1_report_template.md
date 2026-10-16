@@ -1,11 +1,12 @@
 # CryptoShield X — Phase 1 Technical Report
 
-**Problem:** PS-P2 — Crypto Inventory & Migration Planner  
-**Event:** Qiskit Fall Fest 2026 — Phase 1  
-**Team:** BeyondQ  
-**Team Members:** Hansika, Hasini, Pranav, Harsha, Srinidhi  
-**Repository commit:**  11f4fe89d5d5a44053f857ecc89c38600c4a11e1
+**Problem:** PS-P2 — Crypto Inventory & Migration Planner
+**Event:** Qiskit Fall Fest 2026 — Phase 1
+**Team:** BeyondQ
+**Team Members:** Hansika, Hasini, Pranav, Harsha, Srinidhi
+**Repository commit:** 11f4fe89d5d5a44053f857ecc89c38600c4a11e1
 **Report status:** Baseline implementation; official evaluation pending
+
 
 ## 1. Problem and Scope
 
@@ -23,10 +24,10 @@ The current method is intended for initial inventory and triage. Pattern matchin
 
 ## 3. Dataset and Ground Truth
 
-**Dataset used for the local baseline:** `samples/mini_repo`  
-**Files scanned:** 3  
-**Findings generated:** 3  
-**Official organizer dataset:** Not yet evaluated in the recorded baseline  
+**Dataset used for the local baseline:** `samples/mini_repo`
+**Files scanned:** 3
+**Findings generated:** 3
+**Official organizer dataset:** Not yet evaluated in the recorded baseline
 **Ground-truth status:** Official precision and recall are pending authorized labeled data.
 
 The local sample run is a functional smoke test and must not be presented as a representative evaluation of the full challenge dataset.
