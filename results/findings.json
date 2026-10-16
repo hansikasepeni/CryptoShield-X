@@ -1,9 +1,9 @@
 {
   "metadata": {
     "scanner": "CryptoShield X baseline",
-    "input_path": "/mnt/data/CryptoShield_X_Phase1_Starter/samples/mini_repo",
+    "input_path": "C:\\CSX\\CryptoShield_X_Phase1_Starter\\CryptoShield_X_Phase1_Starter\\samples\\mini_repo",
     "files_scanned": 3,
-    "elapsed_seconds": 0.000905,
+    "elapsed_seconds": 0.001425,
     "rule_count": 13,
     "supported_extensions": [
       ".c",
@@ -13,19 +13,6 @@
     ]
   },
   "findings": [
-    {
-      "file": "Example.java",
-      "line": 2,
-      "language": "java",
-      "rule_id": "JAVA_EC",
-      "matched_evidence": "class Example { void setup() throws Exception { KeyPairGenerator generator = KeyPairGenerator.getInstance(\"EC\"); } }",
-      "algorithm": "Elliptic curve",
-      "operation": "key_generation_or_signature",
-      "risk": "high",
-      "confidence": "high",
-      "recommendation": "For signatures evaluate ML-DSA; for key agreement evaluate ML-KEM separately.",
-      "method": "line_regex_rule"
-    },
     {
       "file": "example.c",
       "line": 2,
@@ -37,6 +24,19 @@
       "risk": "high",
       "confidence": "high",
       "recommendation": "Inspect whether RSA is used for key transport, signing or another role.",
+      "method": "line_regex_rule"
+    },
+    {
+      "file": "Example.java",
+      "line": 2,
+      "language": "java",
+      "rule_id": "JAVA_EC",
+      "matched_evidence": "class Example { void setup() throws Exception { KeyPairGenerator generator = KeyPairGenerator.getInstance(\"EC\"); } }",
+      "algorithm": "Elliptic curve",
+      "operation": "key_generation_or_signature",
+      "risk": "high",
+      "confidence": "high",
+      "recommendation": "For signatures evaluate ML-DSA; for key agreement evaluate ML-KEM separately.",
       "method": "line_regex_rule"
     },
     {
