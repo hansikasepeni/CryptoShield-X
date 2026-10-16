@@ -1,21 +1,25 @@
 {
   "benchmark_type": "local_baseline_not_organizer_platform_A_B",
-  "input_path": "/mnt/data/CryptoShield_X_Phase1_Starter/samples/mini_repo",
-  "runs": 3,
+  "input_path": "C:\\CSX\\CryptoShield_X_Phase1_Starter\\CryptoShield_X_Phase1_Starter\\samples\\mini_repo",
+  "runs": 5,
   "files_scanned": 3,
   "findings_per_run": [
+    3,
+    3,
     3,
     3,
     3
   ],
   "duration_seconds": [
-    0.003954543000020294,
-    0.0006968220000089786,
-    0.0007713749999993524
+    0.005522600025869906,
+    0.0026880999794229865,
+    0.0018222000217065215,
+    0.001195400021970272,
+    0.0012253000168129802
   ],
-  "duration_mean_seconds": 0.0018075800000095417,
-  "duration_median_seconds": 0.0007713749999993524,
-  "python_tracemalloc_peak_bytes": 20173,
+  "duration_mean_seconds": 0.0024907200131565332,
+  "duration_median_seconds": 0.0018222000217065215,
+  "python_tracemalloc_peak_bytes": 23160,
   "memory_method_note": "Python allocation peak via tracemalloc; excludes some native/process memory.",
   "limitations": "Use organizer-specified Platform A/B environment and memory method for official results."
 }

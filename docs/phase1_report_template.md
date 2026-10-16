@@ -4,7 +4,7 @@
 **Event:** Qiskit Fall Fest 2026 — Phase 1  
 **Team:** BeyondQ  
 **Team Members:** Hansika, Hasini, Pranav, Harsha, Srinidhi  
-**Repository commit:** [Enter commit hash before submission]  
+**Repository commit:**  204f47f9d8b2a1cd574492327d3c6a2f94dbd8f7
 **Report status:** Baseline implementation; official evaluation pending
 
 ## 1. Problem and Scope
@@ -54,12 +54,17 @@ Official Platform A/B results have not yet been recorded.
 
 **Local baseline benchmark (not an official Platform A/B result):**
 
-- Input: `samples/mini_repo`
-- Files scanned per run: 3
-- Repetitions: 5
-- Mean scan time: approximately 0.00169 seconds
-- Median scan time: approximately 0.00119 seconds
-- Peak Python-tracked allocation: 148,244 bytes, measured using `tracemalloc`
+Input: samples/mini_repo
+
+Files scanned per run: 3
+
+Repetitions: 5
+
+Mean scan time: approximately 0.002491 seconds
+
+Median scan time: approximately 0.001822 seconds
+
+Peak Python-tracked allocation: 23,160 bytes, measured using tracemalloc
 
 The recorded durations are local measurements and may vary with machine load, runtime, and environment. Python-tracked allocation is not the same as total process memory.
 
