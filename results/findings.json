@@ -3,7 +3,7 @@
     "scanner": "CryptoShield X baseline",
     "input_path": "C:\\CSX\\CryptoShield_X_Phase1_Starter\\CryptoShield_X_Phase1_Starter\\samples\\mini_repo",
     "files_scanned": 3,
-    "elapsed_seconds": 0.001425,
+    "elapsed_seconds": 0.001512,
     "rule_count": 13,
     "supported_extensions": [
       ".c",
@@ -23,7 +23,7 @@
       "operation": "key_generation_or_public_key_crypto",
       "risk": "high",
       "confidence": "high",
-      "recommendation": "Inspect whether RSA is used for key transport, signing or another role.",
+      "recommendation": "Inspect the surrounding code to distinguish RSA key generation, encryption, key establishment, and signatures. Assess ML-KEM for key establishment and ML-DSA for signatures where appropriate; validate the OpenSSL version, provider support, and protocol.",
       "method": "line_regex_rule"
     },
     {
@@ -36,7 +36,7 @@
       "operation": "key_generation_or_signature",
       "risk": "high",
       "confidence": "high",
-      "recommendation": "For signatures evaluate ML-DSA; for key agreement evaluate ML-KEM separately.",
+      "recommendation": "The matched API alone may not reveal the full purpose. Determine whether the implementation uses ECDSA signatures or ECDH key agreement. Assess ML-DSA for signatures and ML-KEM for key establishment, then validate protocol and library compatibility.",
       "method": "line_regex_rule"
     },
     {
@@ -49,7 +49,7 @@
       "operation": "key_generation",
       "risk": "high",
       "confidence": "high",
-      "recommendation": "Determine whether RSA supports key establishment or signatures; choose a purpose-appropriate PQC design.",
+      "recommendation": "Confirm whether RSA is used for key establishment, encryption, or digital signatures. For key establishment, assess a vetted ML-KEM-based design; for signatures, assess ML-DSA. Validate protocol support, library availability, and interoperability.",
       "method": "line_regex_rule"
     }
   ]

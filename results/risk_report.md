@@ -5,7 +5,7 @@
 ## Scan summary
 
 - Files scanned: 3
-- Scan duration: 0.001425 seconds
+- Scan duration: 0.001512 seconds
 - Findings: 3
 - Rules: 13
 
@@ -25,9 +25,9 @@
 
 ## Migration triage notes
 
-- **example.c:2 — C_OPENSSL_RSA**: Inspect whether RSA is used for key transport, signing or another role.
-- **Example.java:2 — JAVA_EC**: For signatures evaluate ML-DSA; for key agreement evaluate ML-KEM separately.
-- **example.py:2 — PY_RSA_KEYGEN**: Determine whether RSA supports key establishment or signatures; choose a purpose-appropriate PQC design.
+- **example.c:2 — C_OPENSSL_RSA**: Inspect the surrounding code to distinguish RSA key generation, encryption, key establishment, and signatures. Assess ML-KEM for key establishment and ML-DSA for signatures where appropriate; validate the OpenSSL version, provider support, and protocol.
+- **Example.java:2 — JAVA_EC**: The matched API alone may not reveal the full purpose. Determine whether the implementation uses ECDSA signatures or ECDH key agreement. Assess ML-DSA for signatures and ML-KEM for key establishment, then validate protocol and library compatibility.
+- **example.py:2 — PY_RSA_KEYGEN**: Confirm whether RSA is used for key establishment, encryption, or digital signatures. For key establishment, assess a vetted ML-KEM-based design; for signatures, assess ML-DSA. Validate protocol support, library availability, and interoperability.
 
 ## Limitations
 
