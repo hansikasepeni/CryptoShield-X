@@ -103,13 +103,14 @@ python main.py benchmark samples/mini_repo --out results/local_benchmark.json --
 python -m pytest
 ```
 
-Recorded test environment:
+**Recorded test environment:**
 
 - Operating system: Windows (win32)
-- Python: 3.13.5
+- Python: 3.14.5
 - pytest: 9.1.1
-- Automated tests: 1 passed, 0 failed
-- Test duration: 0.07 seconds
+- Automated tests: 6 passed, 0 failed
+- Test duration: approximately 0.09 seconds
+
 ## 9. Limitations and Next Steps
 
 The current implementation is a runnable baseline, not a completed official evaluation.
